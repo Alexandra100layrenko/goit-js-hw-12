@@ -19,11 +19,21 @@ async function fetchAndRenderImages(query, page) {
     const data = await PixabayAPI.fetchImages(query, page);
     renderGallery(data.hits);
     hideLoader();
+    
     if (data.hits.length < 15 || data.hits.length + (page - 1) * 15 >= data.totalHits) {
       loadMoreBtn.classList.add('hidden');
       if (data.hits.length + (page - 1) * 15 >= data.totalHits) {
         showEndMessage();
       }
+    }
+    // Smooth scrolling
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    if (galleryItems.length) {
+      const { height } = galleryItems[0].getBoundingClientRect();
+      window.scrollBy({
+        top: height * 2,
+        behavior: 'smooth',
+      });
     }
   } catch (error) {
     console.error('Error fetching images:', error);
@@ -48,5 +58,3 @@ loadMoreBtn.addEventListener('click', () => {
   currentPage += 1;
   fetchAndRenderImages(currentQuery, currentPage);
 });
-
-  

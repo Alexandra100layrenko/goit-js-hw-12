@@ -49,7 +49,7 @@ export function clearGallery() {
 export function showLoader() {
   const loader = document.querySelector('.loader');
   if (loader) {
-    loader.classList.add('visible');
+    loader.classList.remove('hidden');
   } else {
     console.error('Loader not found');
   }
@@ -58,7 +58,7 @@ export function showLoader() {
 export function hideLoader() {
   const loader = document.querySelector('.loader');
   if (loader) {
-    loader.classList.remove('visible');
+    loader.classList.add('hidden');
   } else {
     console.error('Loader not found');
   }
@@ -70,4 +70,3 @@ export function showEndMessage() {
     message: "We're sorry, but you've reached the end of search results.",
   });
 }
-
