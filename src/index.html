@@ -1,24 +1,36 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load ="partials/header.html" />
 
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Search App</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2.8.0/dist/simplelightbox.min.css">
+</head>
 
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
+<body>
+  <form class="search-form">
+    <input type="text" class="search-input" placeholder="Enter your search query" />
+    <button type="submit">Search</button>
+  </form>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+  <ul class="gallery"></ul>
+
+  <div class="loader">Loading...</div>
+
+  <button class="load-more-btn hidden">Load more</button>
+
+  <script type="module" src="./js/pixabay-api.js"></script>
+  <script type="module" src="./js/render-functions.js"></script>
+  <script type="module" src="./main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.8.0/dist/simple-lightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
 </html>
