@@ -1,7 +1,5 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,19 +7,14 @@
   <title>Image Search App</title>
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2.8.0/dist/simplelightbox.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2.8.0/dist/simple-lightbox.min.css">
 </head>
-
 <body>
   <form class="search-form">
-    <input
-        type="text"
-        class="search-input"
-        placeholder="Search images..."
-    />
+    <input type="text" class="search-input" placeholder="Search images..." />
     <button type="submit" class="form-btn">Search</button>
-</form>
-
+  </form>
+  
   <ul class="gallery" id="galleryList"></ul>
 
   <div class="loader">Loading images, please wait....</div>
@@ -36,5 +29,4 @@
   <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.8.0/dist/simple-lightbox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
-
 </html>
