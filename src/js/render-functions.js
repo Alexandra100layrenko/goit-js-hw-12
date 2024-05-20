@@ -3,7 +3,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-export function renderGallery(images) {
+function renderGallery(images) {
   const galleryList = document.querySelector('.gallery');
   const loadMoreBtn = document.querySelector('.load-more-btn');
 
@@ -36,7 +36,7 @@ export function renderGallery(images) {
   }
 }
 
-export function clearGallery() {
+function clearGallery() {
   const galleryList = document.querySelector('.gallery');
   if (galleryList) {
     galleryList.innerHTML = '';
@@ -69,6 +69,8 @@ export function showEndMessage() {
     message: "We're sorry, but you've reached the end of search results.",
   });
 }*/
+
+
 function showLoader() {
   const loader = document.querySelector('.loader');
   if (loader) {
@@ -105,9 +107,18 @@ function showWarning(message) {
     message: message,
   });
 }
-export function showEndMessage() {
+function showEndMessage() {
   iziToast.info({
     title: 'Info',
     message: "We're sorry, but you've reached the end of search results.",
   });
 }
+export {
+  renderGallery,
+  clearGallery,
+  showLoader,
+  hideLoader,
+  handleError,
+  showWarning,
+  showEndMessage
+};
