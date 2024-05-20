@@ -45,7 +45,7 @@ export function clearGallery() {
   }
 }
 
-export function showLoader() {
+/*export function showLoader() {
   const loader = document.querySelector('.loader');
   if (loader) {
     loader.classList.remove('hidden');
@@ -63,6 +63,48 @@ export function hideLoader() {
   }
 }
 
+export function showEndMessage() {
+  iziToast.info({
+    title: 'Info',
+    message: "We're sorry, but you've reached the end of search results.",
+  });
+}*/
+function showLoader() {
+  const loader = document.querySelector('.loader');
+  if (loader) {
+    loader.classList.add('visible');
+  } else {
+    console.error('Loader not found');
+  }
+}
+
+function hideLoader() {
+  const loader = document.querySelector('.loader');
+  if (loader) {
+    loader.classList.remove('visible');
+  } else {
+    console.error('Loader not found');
+  }
+}
+
+function handleError(error) {
+  console.error('Error:', error);
+  showErrorMessage('An error occurred. Please try again later.');
+}
+
+function showErrorMessage(message) {
+  iziToast.error({
+    title: 'Error',
+    message: message,
+  });
+}
+
+function showWarning(message) {
+  iziToast.warning({
+    title: 'Warning',
+    message: message,
+  });
+}
 export function showEndMessage() {
   iziToast.info({
     title: 'Info',
