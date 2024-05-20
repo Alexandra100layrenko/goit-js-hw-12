@@ -79,6 +79,17 @@ body {
   cursor: pointer;
 }
 
+.loader {
+  display: block;
+  margin: 0 auto;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #2E2F42;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
