@@ -51,6 +51,15 @@ searchForm.addEventListener('submit', event => {
     loadMoreBtn.classList.add('hidden');
     fetchAndRenderImages(currentQuery, currentPage);
   }
+  showLoader();
+  try {
+    const images = await pixabayApi.fetchImages(query);
+    renderGallery(images);
+  } catch (error) {
+    handleError(error);
+  } finally {
+    hideLoader();
+  }
 });
 
 loadMoreBtn.addEventListener('click', () => {
