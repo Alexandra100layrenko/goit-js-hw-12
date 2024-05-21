@@ -57,4 +57,3 @@ loadMoreBtn.addEventListener('click', async () => {
   currentPage += 1;
   await fetchAndRenderImages(currentQuery, currentPage);
 });
-
