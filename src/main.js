@@ -40,7 +40,7 @@ async function fetchAndRenderImages(query, page) {
   }
 }
 
-searchForm.addEventListener('submit', event => {
+searchForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   const input = event.target.querySelector('.search-input');
   const query = input.value.trim();
