@@ -4,7 +4,7 @@
   | default @import url()
   |============================
 */
-@import url('./reset.css');
+/*@import url('./reset.css');
 @import url('./vite-promo.css');
 @import url('./header.css');
 
@@ -241,4 +241,168 @@ body {
   border-color: #4E75FF;
   color: #fff;
   cursor: pointer;
+}*/
+@import url('./reset.css');
+@import url('./vite-promo.css');
+@import url('./header.css');
+
+:root {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #2E2F42;
+  background-color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  margin: 36px auto 32px;
+}
+
+.search-input {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  width: 272px;
+  height: 22px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px;
+  padding-left: 16px;
+}
+
+.search-input:hover,
+.search-input:focus {
+  border: 1px solid #000000;
+}
+
+.search-input:active {
+  border: 1px solid #4E75FF;
+}
+
+.form-btn {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  background-color: #4E75FF;
+  color: #FFFFFF;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 116px;
+  height: 48px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.form-btn:hover,
+.form-btn:focus {
+  background-color: #3652A3;
+}
+
+.form-btn:active {
+  background-color: #000000;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.gallery-item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.info-item {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+.loader {
+  display: none;
+}
+
+.loader.visible {
+  display: block;
+}
+
+.load-more-btn {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  background-color: #4E75FF;
+  color: #FFFFFF;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 116px;
+  height: 48px;
+  padding: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.load-more-btn.hidden {
+  display: none;
+}
+
+.load-more-btn:hover,
+.load-more-btn:focus {
+  background-color: #3652A3;
+}
+
+.load-more-btn:active {
+  background-color: #000000;
 }
