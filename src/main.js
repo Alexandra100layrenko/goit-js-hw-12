@@ -1,4 +1,4 @@
-import PixabayAPI from './js/pixabay-api.js';
+/*import PixabayAPI from './js/pixabay-api.js';
 import {
   renderGallery,
   clearGallery,
@@ -61,7 +61,7 @@ loadMoreBtn.addEventListener('click', async () => {
   await fetchAndRenderImages(currentQuery, currentPage);
 });
 
-/*
+*/
 import PixabayAPI from './js/pixabay-api.js';
 import {
   renderGallery,
@@ -129,4 +129,3 @@ loadMoreBtn.addEventListener('click', async () => {
   await fetchAndRenderImages(currentQuery, currentPage);
 });
 
-*/

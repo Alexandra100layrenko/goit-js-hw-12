@@ -19,14 +19,13 @@ export default {
       });
 
       if (response.data.hits.length === 0) {
-        throw new Error('No images found');
+        return { hits: [], totalHits: 0 };
       }
 
       return response.data;
     } catch (error) {
-      /*console.error('Error fetching images:', error);
-      throw error;*/
-      throw new Error('Error fetching images: ' + error.message);
+      console.error('Error fetching images:', error);
+      throw new Error('Failed to fetch images from Pixabay API');
     }
   },
 }
