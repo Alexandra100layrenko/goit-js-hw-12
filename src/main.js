@@ -36,7 +36,10 @@ async function fetchAndRenderImages(query, page) {
       });
     }
   } catch (error) {
+    console.error('Error fetching images:', error);
     handleError(error);
+  } finally {
+    hideLoader();
   }
 }
 
