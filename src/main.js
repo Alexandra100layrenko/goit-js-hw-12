@@ -18,7 +18,7 @@ async function fetchAndRenderImages(query, page) {
     showLoader();
     const data = await PixabayAPI.fetchImages(query, page);
     renderGallery(data.hits);
-    hideLoader();
+    /*hideLoader();*/
 
     if (data.hits.length < 15 || data.hits.length + (page - 1) * 15 >= data.totalHits) {
       loadMoreBtn.classList.add('hidden');
