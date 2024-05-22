@@ -24,8 +24,9 @@ export default {
 
       return response.data;
     } catch (error) {
-      console.error('Error fetching images:', error);
-      throw error;
+      /*console.error('Error fetching images:', error);
+      throw error;*/
+      throw new Error('Error fetching images: ' + error.message);
     }
   },
 }
